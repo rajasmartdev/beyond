@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeyondA1C</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+     <!-- Topbar -->
+    <div class="header-topbar">
+        <div class="topbar-container">
+            <div class="topbar-contact-info">
+                <a href="tel:+1234567890" class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+123 456 7890</span>
+                </a>
+                <a href="mailto:info@beyond.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@beyond.com</span>
+                </a>
+            </div>
+            <div class="topbar-social-links">
+                <a href="#" class="social-icon-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="main-navbar">
+        <div class="navbar-container">
+            <div class="brand-logo">
+                <img src="img/BeyondA1c_Final Logo 1.png" alt="">
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu-list" id="navMenuList">
+                <li class="nav-menu-item">
+                    <a href="#home" class="nav-link-item">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#about" class="nav-link-item">About Us</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#test" class="nav-link-item">Our Test</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#clinicians" class="nav-link-item">Our Clinicians/Labs</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#news" class="nav-link-item">News/Insights</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#contact" class="nav-link-item">Contact Us</a>
+                </li>
+                <li class="nav-menu-item">
+                    <button class="appointment-btn">Get Appointment</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="slider-container">
+        <div class="slides-wrapper" id="slidesWrapper">
+
+            <!-- SLIDE 1: Transform your Diabetes Care -->
+            <div class="slide slide-1">
+                <div class="main-scene">
+                    <div class="main-bg-image"></div>
+                    <div class="text-box">
+                        <h1>Transform your Diabetes Care</h1>
+                        <p>One Advanced Test. Earlier Intervention. Better Outcomes</p>
+                        <a href="#" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="image-grid">
+                    <div class="grid-item " data-aos="zoom-in" data-aos-duration="3000"></div>
+                    <div class="grid-item" data-aos="zoom-in-right" data-aos-duration="3000"></div>
+                    <div class="grid-item" data-aos="zoom-in-left" data-aos-duration="3000"></div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: Stop Complications -->
+            <div class="slide slide-2">
+                <div class="slide-2-content">
+                    <h1>STOP COMPLICATIONS BEFORE THEY START</h1>
+                    <p>See which patients face highest risk 5 years before symptoms appear</p>
+                    <div class="slide-2-buttons">
+                        <a href="#" class="btn-primary">See How It Works</a>
+                        <a href="#" class="btn-secondary">Download Clinical Evidence</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: Split Layout -->
+            <div class="slide slide-3">
+
+                <!-- Top half: 3 image grid -->
+                <div class="slide-3-top">
+                    <div class="img-box" style="background-image: url('img/Slide3_-image1.png');"></div>
+                    <div class="img-box" style="background-image: url('img/Slide3_-image2.png');"></div>
+                    <div class="img-box" style="background-image: url('img/Slide3_-image3.png');"></div>
+                </div>
+
+                <!-- Bottom half: Three sections -->
+                <div class="slide-3-bottom">
+                    <!-- Left: Lab equipment -->
+                    <div class="slide-3-section left"></div>
+
+                    <!-- Center: Text box -->
+                    <div class="slide-3-section center">
+                        <div class="slide-3-text-box">
+                            <h2>Transform your Diabetes Care</h2>
+                            <p>One Advanced Test . Earlier Intervention . Better Outcomes</p>
+                            <a href="#" class="cta-button">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Couple picnic -->
+                    <div class="slide-3-section right"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="nav-arrow prev" onclick="changeSlide(-1)">‹</button>
+        <button class="nav-arrow next" onclick="changeSlide(1)">›</button>
+
+        <!-- Dot Indicators -->
+        <div class="dot-indicators">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+    </div>
+
+     <!-- Feature Cards Section -->
+    <section class="beyonda1c-feature-cards">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Card 1: Predict the Future -->
+                <div class="col-md-4">
+                    <div class="beyonda1c-card-wrapper">
+                        <div class="beyonda1c-icon-box beyonda1c-icon-predict">
+                            <img src="img/icon-1.png" alt="">
+                        </div>
+                        <div>
+                          <h3 class="beyonda1c-card-title">Predict the Future</h3>
+                          <p class="beyonda1c-card-text">See complications coming</p>
+                          <p class="beyonda1c-card-text">5 years before symptoms appear.</p>
+                          <p class="beyonda1c-card-text">Know exactly who needs help now.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Prevent the Matters -->
+                <div class="col-md-4">
+                    <div class="beyonda1c-card-wrapper">
+                        <div class="beyonda1c-icon-box beyonda1c-icon-prevent">
+                            <img src="img/icon-2.png" alt="">
+                        </div>
+                        <div>
+                          <h3 class="beyonda1c-card-title">Prevent the Matters</h3>
+                        <p class="beyonda1c-card-text">Stop kidney disease.</p>
+                        <p class="beyonda1c-card-text">Blindness. Avoid amputations.</p>
+                        <p class="beyonda1c-card-text">Before damage happens.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Protect Your Patients -->
+                <div class="col-md-4">
+                    <div class="beyonda1c-card-wrapper">
+                        <div class="beyonda1c-icon-box beyonda1c-icon-protect">
+                            <img src="img/icon-3.png" alt="">
+                        </div>
+                        <div>
+                          <h3 class="beyonda1c-card-title">Protect Your Patients</h3>
+                        <p class="beyonda1c-card-text">Give low-risk patients peace of mind.</p>
+                        <p class="beyonda1c-card-text">Give high-risk patients</p>
+                        <p class="beyonda1c-card-text">the care that saves their life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="beyonda1c-main-content">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Side: Image Collage -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="beyonda1c-image-collage">
+                        <div class="beyonda1c-collage-container">
+                            <img src="img/about us images 1.png" alt="BeyondA1C Medical Testing" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Content -->
+                <div class="col-lg-6">
+                    <h1 class="beyonda1c-main-title" data-aos="fade-up" 
+    data-aos-duration="2000" 
+    data-aos-delay="300" >INTRODUCING BEYONDA1C™</h1>
+                    <div class="beyonda1c-title-underline"></div>
+                    
+                    <h2 class="beyonda1c-subtitle">One Test. Clear Answers. Better Lives.</h2>
+                    
+                    <div class="beyonda1c-checkmark-item" data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                        <div class="beyonda1c-checkmark">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                        </div>
+                        <span class="beyonda1c-checkmark-text">Advanced, cost-effective diagnostic test</span>
+                    </div>
+
+                    <div class="beyonda1c-checkmark-item" data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                        <div class="beyonda1c-checkmark">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                        </div>
+                        <span class="beyonda1c-checkmark-text">Designed to complement the traditional A1C</span>
+                    </div>
+
+                    <div class="beyonda1c-checkmark-item" data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                        <div class="beyonda1c-checkmark">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                        </div>
+                        <span class="beyonda1c-checkmark-text">Clinically validated methodology</span>
+                    </div>
+
+                    <p class="beyonda1c-description">
+                        Our test's highly-reliable methodology yields a simple-to-understand risk result, predicting which adult patients with diabetes are at <span class="beyonda1c-risk-highlight">low, moderate, or high risk</span> for complications over the next 5 years.
+                    </p>
+
+                    <p class="beyonda1c-description">
+                        When clinicians combine information gathered through beyondA1C and clinical examination, they will know which patients are at higher versus lower risk for complication progression.
+                    </p>
+
+                    <button class="beyonda1c-cta-button">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <div class="container-fluid p-0">
+        <div class="section-header">
+            <h1 class="section-title">WHAT WE DO</h1>
+            <p class="section-subtitle">Making complication prediction accessible</p>
+        </div>
+
+        <div class="cards-container">
+            <div class="wave-bg"></div>
+            
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Card 1 - Make Prevention -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-custom card-white">
+                            <div class="arrow-button"></div>
+                            <h3 class="card-title-custom">Make Prevention</h3>
+                            <p class="card-text-custom">We've developed an advanced test that works algesined your existing A1C workflow-making complication prediction accessible to every patient.</p>
+                            <div class="image-container">
+                                <img src="img/bimg-1.png" alt="Doctor with young patient">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 - Identify Risk Early -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-custom card-white">
+                            <div class="arrow-button"></div>
+                            <h3 class="card-title-custom">Identify Risk Early</h3>
+                            <p class="card-text-custom">We've developed an advanced test that works algesined your existing A1C workflow-making complication prediction accessible to every patient.</p>
+                            <div class="image-container">
+                                <img src="img/bimg-2.png" alt="Healthcare professionals with tablet">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 - Enable Better Care -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-custom card-white">
+                            
+                            <h3 class="card-title-custom">Enable Better Care</h3>
+                            <p class="card-text-custom">We've developed an advanced test that works algesined your existing A1C workflow-making complication prediction accessible to every patient.</p>
+                            <div class="arrow-button"></div>
+                            <div class="image-container">
+                                
+                                <img src="img/bimg-3.png" alt="People exercising outdoors">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Scroll Container -->
+    <div class="scroll-container" id="scrollContainer">
+        <section class="risk-section">
+            <div class="content-wrapper" data-aos="zoom-in-left" data-aos-duration="3000">
+                <!-- Left Content -->
+                <div class="left-content">
+                    <h1 class="main-title">Simple Risk Stratification</h1>
+                    <div class="beyonda1c-title-underline"></div>
+                    <h2 class="subtitle">Three clear levels. Three clear pathways to care</h2>
+                    <p class="description">
+                        This simple risk score enables prediction of progressive complications. Allowing physicians to optimize treatments and clinical resources.
+                    </p>
+
+                    <div class="risk-levels-container">
+                        <!-- LOW RISK -->
+                        <div class="risk-level" data-index="0">
+                            <h3 class="risk-title">
+                                <span class="risk-icon low"><img src="img/flower icon 1.png" alt=""></span>
+                                LOW RISK
+                            </h3>
+                            <h4 class="monitoring-title">Standard Monitoring</h4>
+                            <p class="monitoring-text">
+                                Continue with routine care Protocols and regular checkups, Maintain current healthy lifestyle practices and medication adherence
+                            </p>
+                        </div>
+
+                        <!-- MEDIUM RISK -->
+                        <div class="risk-level" data-index="1">
+                            <h3 class="risk-title">
+                                <span class="risk-icon medium"><img src="img/flower icon 1.png" alt=""></span>
+                                MEDIUM RISK
+                            </h3>
+                            <h4 class="monitoring-title">Enhanced Monitoring</h4>
+                            <p class="monitoring-text">
+                                Increase frequency of check-ups and diagnostic testing. Adjust treatment protocols as needed. Implement preventive interventions
+                            </p>
+                        </div>
+
+                        <!-- HIGH RISK -->
+                        <div class="risk-level" data-index="2">
+                            <h3 class="risk-title">
+                                <span class="risk-icon high"><img src="img/flower icon 1.png" alt=""></span>
+                                HIGH RISK
+                            </h3>
+                            <h4 class="monitoring-title">Intensive Care</h4>
+                            <p class="monitoring-text">
+                                Immediate intervention required. Frequent monitoring and specialized care. Comprehensive treatment plan with multidisciplinary team
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Carousel -->
+                <div class="right-carousel">
+                    <div class="carousel-images">
+                        <div class="carousel-image" data-index="0">
+                            <img src="img/doctor with patient.png" alt="Low Risk Consultation">
+                        </div>
+                        <div class="carousel-image" data-index="1">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=1200&fit=crop" alt="Medium Risk Consultation">
+                        </div>
+                        <div class="carousel-image" data-index="2">
+                            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=1200&fit=crop" alt="High Risk Consultation">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="serve-section">
+        
+        <div class="serve-wrapper">
+            <!-- Left Panel -->
+            <div class="serve-left-panel">
+                <div class="specialist-card">
+                    <div class="card-decoration-top-left"> <img src="img/flower icon 2.png" alt=""></div>
+                    <div class="card-decoration-top-right"><img src="img/flower icon 2.png" alt=""></div>
+                    
+                    <h3 class="specialist-heading">Endoncrolonists</h3>
+                    <p class="specialist-description">
+                        Lorem Ipsum is text of the printing and industry.Lorem Ipsum is text of the printing and industry.
+                    </p>
+                    
+                    <div class="doctor-image-container">
+                        <div class="doctor-circle-bg">
+                            <img src="img/doctor.png" 
+                                 alt="Doctor" 
+                                 class="doctor-photo">
+                        </div>
+                        <div class="arrow-badge"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="serve-right-panel">
+                <h2 class="serve-main-heading">WHO WE SERVE</h2>
+                <p class="serve-tagline">
+                    Thought advanced diagnostics and data-driven insights, we're helping clinical teams deliver better diabetes care.
+                </p>
+                <button class="learn-more-btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="title-wrapper">
+                <h1>Send Us A Message</h1>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard of type</p>
+            
+            <form>
+                <div class="row mb-4">
+                    <div class="col-md-3 mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <input type="tel" class="form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <input type="tel" class="form-control" placeholder="Phone Number">
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="wave-shape"></div>
+        
+        <div class="container footer-content">
+            <div class="row">
+                <!-- Contact Us Column -->
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <h3>Contact Us</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Address</h5>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Phone</h5>
+                                <p>+012 345 6789</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email</h5>
+                                <p>info@beyond.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Links Column -->
+                <div class="col-md-3">
+                    <div class="footer-links">
+                        <h3>Our Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Test</a></li>
+                            <li><a href="#">Our Clinicians/Labs</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Resources Column -->
+                <div class="col-md-2">
+                    <div class="footer-links">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Documentations</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Map Column -->
+                <div class="col-md-4">
+                    <div class="map-circle">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531654!3d-37.817209979751654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1635745328239!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© Copyright Beyond A1C All Rights Reserved.</p>
+            </div>
+        </div>
+
+        <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            </svg>
+        </div>
+    </footer>
+
+    <script>
+        const scrollContainer = document.getElementById('scrollContainer');
+        const riskLevels = document.querySelectorAll('.risk-level');
+        const carouselImages = document.querySelectorAll('.carousel-image');
+        
+        let currentIndex = 0;
+        const totalSlides = 3;
+
+        function updateSlide(index) {
+            // Update risk levels
+            riskLevels.forEach((level, i) => {
+                if (i === index) {
+                    level.classList.add('active');
+                } else {
+                    level.classList.remove('active');
+                }
+            });
+
+            // Update images
+            carouselImages.forEach((img, i) => {
+                if (i === index) {
+                    img.classList.add('active');
+                } else {
+                    img.classList.remove('active');
+                }
+            });
+        }
+
+        // Initialize first slide
+        updateSlide(0);
+
+        window.addEventListener('scroll', () => {
+            const containerRect = scrollContainer.getBoundingClientRect();
+            const containerHeight = scrollContainer.offsetHeight;
+            const viewportHeight = window.innerHeight;
+            
+            // Calculate scroll progress within the container
+            const scrollProgress = Math.max(0, Math.min(1, -containerRect.top / (containerHeight - viewportHeight)));
+            
+            // Determine which slide to show based on scroll progress
+            const newIndex = Math.min(Math.floor(scrollProgress * totalSlides), totalSlides - 1);
+            
+            if (newIndex !== currentIndex) {
+                currentIndex = newIndex;
+                updateSlide(currentIndex);
+            }
+        });
+    </script>
+    
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const slidesWrapper = document.getElementById('slidesWrapper');
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlide() {
+            slidesWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+
+            // Loop around
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+
+            updateSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        // Auto-advance slides every 6 seconds
+        let autoSlideInterval = setInterval(() => {
+            changeSlide(1);
+        }, 6000);
+
+        // Pause auto-advance on hover
+        document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        // Resume auto-advance on mouse leave
+        document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(() => {
+                changeSlide(1);
+            }, 6000);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+    </script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenuList = document.getElementById('navMenuList');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenuList.classList.toggle('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            if (navMenuList.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar-container') && navMenuList.classList.contains('active')) {
+                navMenuList.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
